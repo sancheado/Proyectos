@@ -31,13 +31,12 @@
         .sm-menu,.dropdown-item{background-color:#F5475D;color:#ffffff;}
 
         /* Header */
-        .header{background-image: url("imatges/cabecera.png");background-attachment:fixed;background-position:center;background-repeat:no-repeat;background-size:cover;min-height:550px;}
+        .header{background-image: url("imatges/Yo_Madrid.jpg");height:100vh;background-attachment:fixed;background-position:center;background-repeat:no-repeat;background-size:cover;}
         .ponerImg{position: relative;top: 33px;}
         .redondearImg{width:450px;height:450px;border-radius:225px;border:10px solid #666;margin-top:50px}
         .col-6{color:#FFFFFF;font-weight:700;font-size:25px;text-align:right;}
         .mytext{padding-top:350px;}
         .content{min-height:100vh;}
-
 
         /* Footer */
         footer{background-color:#F5475D;color:#ffffff;box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.8);}
@@ -47,7 +46,6 @@
         .ftr_btm_area {background: transparent;padding-top: 20px;padding-bottom: 20px;border-top: 1px dotted #888;margin-top: 28px;z-index: 100;position: relative;}
         .copyright_text{margin: 6px 0;}
         .payment_mthd_icon li {display: inline-block;margin-left: 10px;font-size: 30px;color: #fff;}
-
         .test{display:block;margin: 5px auto;}
         .card-block {
     font-size: 1em;
@@ -106,7 +104,7 @@
 </head>
 <body style="background-color: #EEEEEE;">
     <div class="header">
-        <nav class="navbar navbar-expand-sm navbar-light bg-light fixed-top mynavbar">
+        <nav class="navbar mr-auto navbar-expand-sm navbar-light bg-light fixed-top mynavbar">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -135,12 +133,6 @@
                         <a class="nav-link" href="#">Call</a>
                     </li>
                 </ul>
-                <div class="social-part">
-                    <a href="https://www.facebook.com/Xanse69" class="iconos_header"><i class="fab fa-facebook"></i></a>
-                    <a href="https://twitter.com/Xanse69" class="iconos_header"><i class="fab fa-twitter"></i></a>
-                    <a href="https://www.instagram.com/xanse/" class="iconos_header"><i class="fab fa-instagram"></i></a>
-                    <a href="https://www.linkedin.com/in/josesanchez1987/" class="iconos_header"><i class="fab fa-linkedin"></i></a>
-                </div>
             </div>
         </nav>
         <div class="row ponerImg">
