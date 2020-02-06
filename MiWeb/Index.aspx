@@ -99,7 +99,7 @@
         .content{background-color: #ffffff;border: .4px solid black;margin-top: 100px;box-shadow: 1px 2px 6px 2px rgba(0, 0, 0, 0.1);}
         .page-heading{position: relative;margin-bottom: 20px;margin-top:20px;}
         .page-heading h1 {font-size: 24px;margin-bottom: 5px;}
-        .page-heading p {font-size: 14px;color: #777;}
+        .page-heading p {font-size: 16px;color: #777;}
         .skill-block {overflow: hidden;padding: 5px 15px 15px;text-align: center;box-shadow:1px 2px 6px 2px rgba(0, 0, 0, 0.1);margin: 15px auto;}
         .sk-border h2 {color: #777;display: inline-block;font-size: 48px;font-weight: 900;height: 200px;width: 180px;}
         .sk-border{text-align: center;line-height: 100px;position:relative;z-index:0;margin: 70px auto;}
@@ -126,7 +126,13 @@
         .contacto{background-color:#ffffff;color:Black;border: .4px solid black;box-shadow: 1px 2px 6px 2px rgba(0, 0, 0, 0.1);margin-top:100px}
         .contacto h2{padding:25px;font-family: 'Cambay', sans-serif;font-size: 24px;margin-bottom: 5px;font-weight: 600;line-height: 1.2;text-align:center;text-align: center;display: block;margin: 0 auto;}
         form{display:block;width:50%;margin: 10px auto;}
-        
+        label[for=textForm]{display:block; margin: 5px auto;width:65%; text-align:justify;font-family: 'Cambay', sans-serif;font-size: 16px;color: #777;font-weight: 300;}
+
+        /* Servicios */
+        .servicios{background-color:#ffffff;color:Black;border: .4px solid black;box-shadow: 1px 2px 6px 2px rgba(0, 0, 0, 0.1);margin-top:100px}
+        .servicios h2{padding:25px;font-family: 'Cambay', sans-serif;font-size: 24px;margin-bottom: 5px;font-weight: 600;line-height: 1.2;text-align:center;text-align: center;display: block;margin: 0 auto;}
+        label[for=textServicios]{display:block; margin: 5px auto;width:65%; text-align:justify;font-family: 'Cambay', sans-serif;font-size: 16px;color: #777;font-weight: 300;}
+
         /* Footer */
         footer{background-color:#DB230C;color:#ffffff;box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.8);}
         .ftr_social_icon li {display: inline-block;text-align: center;padding: 4px;}
@@ -315,12 +321,36 @@
         </section>
     </div>
     <br />
+    <!-- Mis Servicios -->
+    <div class="container servicios">
+        <div class="row">
+            <h2>
+                Mis Servicios
+            </h2>
+        </div>
+        <div class="row">
+            <label for="textServicios">
+                Pues actualmente mis servicios principales están orientados a la creación de sitios web "estaticos", aunque en depende que casos
+                podría crear un sitio dinamico, aunque como es obvio, se incrementaria su precio y su tiempo de desarrollo
+            </label>
+        </div>
+        <br />
+        <div class="row" style="border:1px solid yellow;">
+            Holaaa
+        </div>
+    </div>
+    <br />
     <!-- Contacto -->
     <div id="Formulario" class="container contacto">
         <div class="row">
             <h2>
                 Formulario de Contacto
             </h2>
+        </div>
+        <div class="row">
+            <label for="textForm">
+                En está sección podrás enviarme un Email con las dudas que tengas y de este modo podré intentar darte una solución lo mas sencilla posible. No dudes en preguntarme lo que necesites. Gracias por visitar mi Web y un saludo!
+            </label>
         </div>
         <div class="row">
             <form>
@@ -331,7 +361,7 @@
                             <div class="input-group-prepend">
                                 <div class="input-group-text"><i class="fa fa-user text-info"></i></div>
                             </div>
-                            <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre y Apellido" required>
+                            <input type="text" class="form-control" id="txtNombreApellidos" name="nombre" placeholder="Nombre y Apellido" required>
                         </div>
                     </div>
                     <div class="form-group">
@@ -339,7 +369,7 @@
                             <div class="input-group-prepend">
                                 <div class="input-group-text"><i class="fa fa-envelope text-info"></i></div>
                             </div>
-                            <input type="email" class="form-control" id="nombre" name="email" placeholder="ejemplo@gmail.com" required>
+                            <input type="email" class="form-control" id="txtEmail" name="email" placeholder="ejemplo@gmail.com" required>
                         </div>
                     </div>
                     <div class="form-group">
