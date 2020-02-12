@@ -173,6 +173,8 @@
     <Content Include="Content\Site.css" />
     <Content Include="Default.aspx" />
     <Content Include="EjerciciosJavascript\ARRAYS.aspx" />
+    <Content Include="EjerciciosJavascript\HTMLdelJuego.aspx" />
+    <Content Include="EjerciciosJavascript\onMouseOver.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -252,6 +254,20 @@
     </Compile>
     <Compile Include="EjerciciosJavascript\ARRAYS.aspx.vb">
       <DependentUpon>ARRAYS.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="EjerciciosJavascript\HTMLdelJuego.aspx.designer.vb">
+      <DependentUpon>HTMLdelJuego.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EjerciciosJavascript\HTMLdelJuego.aspx.vb">
+      <DependentUpon>HTMLdelJuego.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="EjerciciosJavascript\onMouseOver.aspx.designer.vb">
+      <DependentUpon>onMouseOver.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EjerciciosJavascript\onMouseOver.aspx.vb">
+      <DependentUpon>onMouseOver.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Global.asax.vb">

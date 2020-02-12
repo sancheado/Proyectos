@@ -5,11 +5,32 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title></title>
+    <title>Pruebas y más pruebas</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
 </head>
 <body>
     <form id="form1" runat="server">
-        <div>
+        <div class="container-fluid" style="border:1px solid red;">
+            Esto es un <b>Container-fluid</b>
+        </div>
+        <br />
+        <div class="container" style="border:1px solid blue;">
+            esto es un <b>Container</b>
+        </div>
+        <br />
+        <div class="row" style="border:1px solid green;">
+            esto es un <b>Row</b>
+        </div>
+        <br />
+        <div class="container" style="border:1px solid pink">
+            <div class="row" style="border:1px solid blue">
+                <div class="col-md-8" style="border:1px solid brown">.col-md-8</div>
+                <div class="col-md-4" style="border:1px solid yellow">.col-md-4</div>
+                <div class="w-100"></div>
+                <div class="col-md-8" style="border:1px solid brown">.col-md-8</div>
+                <div class="col-md-4" style="border:1px solid yellow">.col-md-4</div>
+            </div>
         </div>
         <button type="button" id="miBoton" onclick="return operaciones();">Botón</button>
     </form>

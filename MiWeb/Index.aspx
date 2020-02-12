@@ -89,6 +89,8 @@
         .nav-link:hover{color:black;}
         .sm-menu,.dropdown-item{background-color:#DB230C;color:#ffffff;}
 
+        .testeo{Position:relative;background-color:#DB230C !important;}
+
         /* Header */
         .header{Position:relative;background-image: url("imatges/Yo_Madrid.jpg");height:90vh;background-attachment:fixed;background-position:center;background-repeat:no-repeat;background-size:cover;}
         .textoAnimado{width: 80%;position: absolute;top: 35%;left: 40%;}
@@ -170,8 +172,8 @@
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-                <ul class="navbar-nav mr-auto mt-2 mt-lg-0 justify-content-end">
+            <div class="collapse navbar-collapse justify-content-end" id="navbarTogglerDemo03">
+                <ul class="navbar-nav navbar-right">
                     <li class="nav-item">
                         <a class="nav-link disabled" href="#">Inicio <span class="sr-only">(current)</span></a>
                     </li>
@@ -201,7 +203,7 @@
                     </li>
                 </ul>
             </div>
-        </nav>
+        </nav>        
         <div class="container">
             <div class="textoAnimado">
                 <h1>
@@ -212,69 +214,72 @@
             </div>
         </div>
     </div>
-    <!-- Mis Hablidades 1/2 -->
-    <div id="Habilidades" class="container content">
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="page-heading text-center">
-                    <h1>Mis Habilidades 1/2</h1>
-                    <p>Aquí os enseño las habilidades que tengo en cuanto al <b><u>Diseño WEB</u></b>
-                        <br />
-                        Dichas habilidades las he ido adquiriendo a lo largo de mi vida mediante estudios ó distintos trabajos que he ido realizando.</p>
-                </div>
-                <div class="row">
-                    <div class="col-xs-12 col-sm-6 col-md-3">
-                        <div class="skill-block">
-                            <div class="sk-border">
-                                <h2>98%</h2>
-                            </div>
-                            <div class="sk-text">
-                                <h4><img src="imatges/HTML5_Logo.png" />HTML/CSS</h4>
-                                <p>Años de formación y aprendizaje tanto en diferentes <b>Empresas</b> como por propia motivación. Varios proyectos echos por cuenta propia, tanto para amigos como personales para mí.</p>
+    <!-- Mis Hablidades -->
+    <div id="Habilidades" class="container-fluid testeo">
+        <br />
+        <div class="container content">            
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="page-heading text-center">
+                        <h1>Mis Habilidades 1/2</h1>
+                        <p>Aquí os enseño las habilidades que tengo en cuanto al <b><u>Diseño WEB</u></b>
+                            <br />
+                            Dichas habilidades las he ido adquiriendo a lo largo de mi vida mediante estudios ó distintos trabajos que he ido realizando.</p>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6 col-md-3">
+                            <div class="skill-block">
+                                <div class="sk-border">
+                                    <h2>98%</h2>
+                                </div>
+                                <div class="sk-text">
+                                    <h4><img src="imatges/HTML5_Logo.png" />HTML/CSS</h4>
+                                    <p>Años de formación y aprendizaje tanto en diferentes <b>Empresas</b> como por propia motivación. Varios proyectos echos por cuenta propia, tanto para amigos como personales para mí.</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-6 col-md-3">
-                        <div class="skill-block">
-                            <div class="sk-border">
-                                <h2>80%</h2>
-                            </div>
-                            <div class="sk-text">
-                                <h4><img src="imatges/JS_Logo.png" />Javascript</h4>
-                                <p>Aunque es cierto que lo considero un lenguaje <b>"más follonero"</b> también es cierto que es el mejor lenguaje para la validación de los campos de un Formulario.Por ello es <b>IMPRESCINDIBLE</b>.</p>
+                        <div class="col-xs-12 col-sm-6 col-md-3">
+                            <div class="skill-block">
+                                <div class="sk-border">
+                                    <h2>80%</h2>
+                                </div>
+                                <div class="sk-text">
+                                    <h4><img src="imatges/JS_Logo.png" />Javascript</h4>
+                                    <p>Aunque es cierto que lo considero un lenguaje <b>"más follonero"</b> también es cierto que es el mejor lenguaje para la validación de los campos de un Formulario.Por ello es <b>IMPRESCINDIBLE</b>.</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-6 col-md-3">
-                        <div class="skill-block">
-                            <div class="sk-border">
-                                <h2>75%</h2>
-                            </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3">
+                            <div class="skill-block">
+                                <div class="sk-border">
+                                    <h2>75%</h2>
+                                </div>
 
-                            <div class="sk-text">
-                                <h4><img src="imatges/ASP_Logo.png" />ASP.NET</h4>
-                                <p>Un año de experiencia en <b>TOWERPLANE ADVANCED PROJECTS</b> con la creación de formularios <b>RESPONSIVES</b> y también creando el <b>BackOffice</b> para la gestión de Eventos.</p>
+                                <div class="sk-text">
+                                    <h4><img src="imatges/ASP_Logo.png" />ASP.NET</h4>
+                                    <p>Un año de experiencia en <b>TOWERPLANE ADVANCED PROJECTS</b> con la creación de formularios <b>RESPONSIVES</b> y también creando el <b>BackOffice</b> para la gestión de Eventos.</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-6 col-md-3">
-                        <div class="skill-block">
-                            <div class="sk-border">
-                                <h2>92%</h2>
-                            </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3">
+                            <div class="skill-block">
+                                <div class="sk-border">
+                                    <h2>92%</h2>
+                                </div>
 
-                            <div class="sk-text">
-                                <h4><img src="imatges/logo_php.png" />PHP</h4>
-                                <p>Dos años de experiencia en distintas asignaturas de la <b>UNIVERSIDAD</b> Sin contar diversos cursos/talleres que yo he ido realizando por cuenta propia y diversos proyectos.</p>
+                                <div class="sk-text">
+                                    <h4><img src="imatges/logo_php.png" />PHP</h4>
+                                    <p>Dos años de experiencia en distintas asignaturas de la <b>UNIVERSIDAD</b> Sin contar diversos cursos/talleres que yo he ido realizando por cuenta propia y diversos proyectos.</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+
             </div>
-
         </div>
-    </div>
-    <!-- Mis Hablidades 2/2 -->
+
+        <!-- Mis Hablidades 2/2 -->
     <div id="Habilidades2" class="container content">
        <section class="our-skills">
             <div class="container">
@@ -320,6 +325,8 @@
             </div>
         </section>
     </div>
+
+    </div>    
     <br />
     <!-- Mis Servicios -->
     <div class="container servicios">
@@ -427,3 +434,68 @@
     </script>
 </body>
 </html>
+
+
+<!--
+            <nav class="navbar mr-auto navbar-expand-sm navbar-light bg-light fixed-top mynavbar">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+                <ul class="navbar-nav justify-content-end navbar-right">
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#">Inicio <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item dropdown dmenu">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbardropHabilitats" data-toggle="dropdown">Sobre Mí
+                        </a>
+                        <div class="dropdown-menu sm-menu">
+                            <a class="dropdown-item" href="#Habilidades">Habilidades</a>
+                            <a class="dropdown-item" href="#Habilidades2">Habilidades 2</a>
+                        </div>
+
+                    </li>
+                    <li class="nav-item dropdown dmenu">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Mís Servicios
+                        </a>
+                        <div class="dropdown-menu sm-menu">
+                            <a class="dropdown-item" href="#">service2</a>
+                            <a class="dropdown-item" href="#">service 2</a>
+                            <a class="dropdown-item" href="#">service 3</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Formulario">Contactame</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Call</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+            
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="navbar-collapse collapse w-100 dual-collapse2 order-1 order-md-0 mynavbar">
+        <ul class="navbar-nav ml-auto text-center">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Link</a>
+            </li>
+        </ul>
+    </div>
+    <div class="mx-auto my-2 order-0 order-md-1 position-relative">
+        <a class="mx-auto" href="#">
+            <img src="imatges/Yo_Madrid.jpg" class="rounded-circle" style="width:150px;height:150px;">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </div>
+    <div class="navbar-collapse collapse w-100 dual-collapse2 order-2 order-md-2">
+        <ul class="navbar-nav mr-auto text-center">
+            <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+            -->
