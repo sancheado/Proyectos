@@ -174,7 +174,9 @@
     <Content Include="Default.aspx" />
     <Content Include="EjerciciosJavascript\ARRAYS.aspx" />
     <Content Include="EjerciciosJavascript\HTMLdelJuego.aspx" />
+    <Content Include="EjerciciosJavascript\Mostrar-Ocultar.aspx" />
     <Content Include="EjerciciosJavascript\onMouseOver.aspx" />
+    <Content Include="EjerciciosJavascript\VArios.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -192,6 +194,7 @@
     <Content Include="MiWeb\Imatges\header.jpg" />
     <Content Include="MiWeb\Imatges\yo.jpg" />
     <Content Include="MiWeb\Index.aspx" />
+    <Content Include="MiWeb\Index2.html" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
@@ -263,11 +266,25 @@
       <DependentUpon>HTMLdelJuego.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
+    <Compile Include="EjerciciosJavascript\Mostrar-Ocultar.aspx.designer.vb">
+      <DependentUpon>Mostrar-Ocultar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EjerciciosJavascript\Mostrar-Ocultar.aspx.vb">
+      <DependentUpon>Mostrar-Ocultar.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="EjerciciosJavascript\onMouseOver.aspx.designer.vb">
       <DependentUpon>onMouseOver.aspx</DependentUpon>
     </Compile>
     <Compile Include="EjerciciosJavascript\onMouseOver.aspx.vb">
       <DependentUpon>onMouseOver.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="EjerciciosJavascript\VArios.aspx.designer.vb">
+      <DependentUpon>VArios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EjerciciosJavascript\VArios.aspx.vb">
+      <DependentUpon>VArios.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Global.asax.vb">
