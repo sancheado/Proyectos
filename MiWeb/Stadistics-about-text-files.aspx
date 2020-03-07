@@ -146,7 +146,7 @@
             </div>
             <br />
             <div class="row">
-                <div class="panel-oculto" id="secretPanel" style="display:none;" runat="server">
+                <div class="panel-oculto" id="secretPanel" runat="server">
                     <div class="panel-header">
                         Results for your file:
                         <span id="spOculto" runat="server"></span>
@@ -164,7 +164,7 @@
                     <div class="row filas">
                         <div class="col-md-6">
                             <label for="infoText">
-                                ·   
+                                · Line count  
                             </label>
                         </div>
                         <div class="col-md-6">
@@ -174,7 +174,7 @@
                     <div class="row filas" >
                         <div class="col-md-6">
                             <label for="infoText">
-                                · Line count  
+                                ·   
                             </label>
                         </div>
                         <div class="col-md-6">

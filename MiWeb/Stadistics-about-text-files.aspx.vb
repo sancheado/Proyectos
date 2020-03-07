@@ -14,16 +14,21 @@ Public Class Stadistics_about_text_files
                 Dim fname As String = Path.GetFileName(file.FileName)
                 Dim extension As String = Path.GetFileName(file.ContentType)
                 If extension = "plain" Then '2º Check, file its txt file
-                    If Path.GetFileName(file.ContentLength) < 1200 Then
+                    If Path.GetFileName(file.ContentLength) < 1200 Then 'Ponemos límite a la subida del txt. No más de 1200 de longitud total.
+                        'activamos/desactivamos paneles y renombramos el panel que estaba disable, ahora se llamará como el archivo subido (:
                         secretPanel.Attributes.Add(“style”, ” display:Block;”)
                         PrincipalPanel.Attributes.Add(“style”, ” display:none;”)
-                        'name.Value = fname
                         spOculto.InnerHtml = fname & "<i class='fas fa-file-upload miI'></i>"
+
+                        'Guardamos el archivo subido para su posterior analisis.
+                        Dim location As String = "C:\Users\Sanchez\source\repos\MyWebSite\MiWeb\" & fname
+                        file.SaveAs(Path.Combine("C:\Users\Sanchez\source\repos\MyWebSite\MiWeb", fname))
+
+
                         'If Path.GetFileName(file.ContentType) = "plain" Then type.Value = ".txt"
                         dimensions.Value = Path.GetFileName(file.ContentLength)
                         txtArea.Value = ""
-                        Dim location As String = "C:\Users\Sanchez\source\repos\MyWebSite\MiWeb\" & fname
-                        file.SaveAs(Path.Combine("C:\Users\Sanchez\source\repos\MyWebSite\MiWeb", fname))
+
                         Dim sr As New System.IO.StreamReader(location)
                         txtArea.Value = sr.ReadToEnd()
 
@@ -75,7 +80,7 @@ Public Class Stadistics_about_text_files
     End Sub
 
     Public Function restart() 'Function for reset every input
-        secretPanel.Attributes.Add(“style”, ” display:none;”)
+        'secretPanel.Attributes.Add(“style”, ” display:none;”)
         PrincipalPanel.Attributes.Add(“style”, ” display:Block;”)
         wordCount.Value = ""
         lineCount.Value = ""
