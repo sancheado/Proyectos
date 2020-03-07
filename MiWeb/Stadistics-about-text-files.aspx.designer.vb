@@ -83,7 +83,7 @@ Partial Public Class Stadistics_about_text_files
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents wordCount As Global.System.Web.UI.HtmlControls.HtmlInputText
+    Protected WithEvents wordCount As Global.System.Web.UI.HtmlControls.HtmlSelect
 
     '''<summary>
     '''Control lineCount.
@@ -95,13 +95,31 @@ Partial Public Class Stadistics_about_text_files
     Protected WithEvents lineCount As Global.System.Web.UI.HtmlControls.HtmlInputText
 
     '''<summary>
-    '''Control dimensions.
+    '''Control mean.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents dimensions As Global.System.Web.UI.HtmlControls.HtmlInputText
+    Protected WithEvents mean As Global.System.Web.UI.HtmlControls.HtmlSelect
+
+    '''<summary>
+    '''Control mode.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents mode As Global.System.Web.UI.HtmlControls.HtmlSelect
+
+    '''<summary>
+    '''Control median.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents median As Global.System.Web.UI.HtmlControls.HtmlSelect
 
     '''<summary>
     '''Control txtArea.

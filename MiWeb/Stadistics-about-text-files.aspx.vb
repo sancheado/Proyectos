@@ -1,6 +1,5 @@
-﻿Imports System.Diagnostics.Eventing
+﻿Imports System
 Imports System.IO
-
 Public Class Stadistics_about_text_files
     Inherits System.Web.UI.Page
 
@@ -9,6 +8,7 @@ Public Class Stadistics_about_text_files
         If Not IsPostBack Then
             restart()
         Else
+            restart()
             Dim file = Request.Files("fileItem")
             If (file.ToString <> "" And file.ContentLength > 0) Then '1º Check, input with something
                 Dim fname As String = Path.GetFileName(file.FileName)
@@ -24,42 +24,26 @@ Public Class Stadistics_about_text_files
                         Dim location As String = "C:\Users\Sanchez\source\repos\MyWebSite\MiWeb\" & fname
                         file.SaveAs(Path.Combine("C:\Users\Sanchez\source\repos\MyWebSite\MiWeb", fname))
 
+                        Dim MiArray() As String, VDatos As String
 
-                        'If Path.GetFileName(file.ContentType) = "plain" Then type.Value = ".txt"
-                        dimensions.Value = Path.GetFileName(file.ContentLength)
-                        txtArea.Value = ""
-
-                        Dim sr As New System.IO.StreamReader(location)
-                        txtArea.Value = sr.ReadToEnd()
-
-                        Dim leer As New StreamReader(location)
-                        Dim MyArray() As String
-                        Dim VDatos() As String
-
-
-
-
-                        Dim contWords As Integer
-                        Dim ConjuntLinies As System.IO.StreamReader
-                        ConjuntLinies = New System.IO.StreamReader(location)
-                        Dim Linia As String
-                        Linia = Trim(ConjuntLinies.ReadLine())
-                        Dim cont As String = "0"
-                        While Not Linia Is Nothing
-                            VDatos = Linia.Split(vbTab)
-                            contWords += VDatos.Length
-                            MyArray = VDatos
-                            'Dim VDades2 As String
-                            'VDades2 = VDatos(0)
-                            'Dim separar() As String = VDades2.Split(",")
-                            'Dim idOrigen As String = separar(0)
-                            Linia = Trim(ConjuntLinies.ReadLine())
-                            cont += 1
+                        Dim sr As StreamReader = New StreamReader(location)
+                        Dim full_text As StreamReader = New StreamReader(location)
+                        Dim line As String, count_line As Integer
+                        line = Trim(sr.ReadLine())
+                        ReDim MiArray(line.Length)
+                        While (Not line Is Nothing And line <> "")
+                            For i = 0 To line.Length - 1
+                                VDatos = line(i)
+                                MiArray(i) = VDatos
+                            Next
+                            count_line += 1
+                            wordCount.Items.Add(New ListItem("Line [" & count_line & "] have " & line.Length & " words", count_line))
+                            line = Trim(sr.ReadLine())
                         End While
-                        lineCount.Value = cont
-                        wordCount.Value = contWords
-                        ConjuntLinies.Close()
-                        leer.Close()
+
+                        txtArea.Value = full_text.ReadToEnd() 'Put the complete text inside txt file in the textarea
+                        lineCount.Value = count_line
+                        full_text.Close()
                         sr.Close()
                         If (System.IO.File.Exists(location)) Then
                             System.IO.File.Delete(location)
@@ -80,10 +64,18 @@ Public Class Stadistics_about_text_files
     End Sub
 
     Public Function restart() 'Function for reset every input
-        'secretPanel.Attributes.Add(“style”, ” display:none;”)
+        secretPanel.Attributes.Add(“style”, ” display:none;”)
         PrincipalPanel.Attributes.Add(“style”, ” display:Block;”)
         wordCount.Value = ""
         lineCount.Value = ""
         txtArea.Value = ""
+        wordCount.Items.Clear()
+    End Function
+
+    Public Function MeanMedianMode(ByRef location As String, ByVal countLine As Integer) As Boolean
+        Dim check As Boolean = False
+
+
+        Return check
     End Function
 End Class

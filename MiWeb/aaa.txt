@@ -1,7 +1,0 @@
-Para indicar que se use una codificación en concreto cuando no existe la marca BOM, debemos usar un valor verdadero después de indicar la codificación que queremos usar.
-En este ejemplo, se usará la codificación Default si no tiene esa marca.
-En el método guardarTextoBOM, se guarda usando la codificación UTF8, de esa forma puedes comprobar que aunque en leerTextoBOM se haya indicado Default, 
-los caracteres "raros" se leerán correctamente, lo que demuestra que se está usando la codificación correcta.
-Si modificas el código del método leerTextoBOM para que no se detecte la codificación usada, (quitando el tercer argumento del constructor de StreamReader), 
-el texto se mostrará también correctamente, algo que no ocurrirá si en lugar de guardarlo como UTF-8 lo hubiésemos guardado como Default y lo leyéramos como UTF8, 
-en ese caso, el texto mostrado sería el siguiente, que es lo que a algunos les ocurre cuando leen ficheros de Visual Basic 6.0 sin indicar el valor Encoding.Default:

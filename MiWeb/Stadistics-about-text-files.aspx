@@ -51,11 +51,15 @@
         .miI{padding-left:15px;color:#ec008c}
         .filas{margin-left:-10px;width:104%;padding:10px;border-bottom:1.5px solid #61dafb;}
         .filas2{margin-left:-10px;width:104%;padding:10px;}
-        label[for=infoText]{float:right; font-size:25px;text-align:justify; color:black;font-family: 'Caladea', serif;}
-        .form-control{border:.5px solid black;}
+        label[for=infoText]{font-size: 18px;text-align: justify;color: black;font-family: 'Caladea', serif;margin-top: 10px;text-align: center;width: 100%;}
+        label[for=infoText2],label[for=infoText3]{font-size: 18px;color: black;font-family: 'Caladea', serif;margin-top: 10px;width: 100%;text-align: center;padding: 10px;}
+        .form-control{border:.5px solid black;text-align: center;}
 
+        /* Select */
+        .mySelect{display:block;margin:5px auto;padding:10px;border:0.5px solid #ABABAB;font-family: 'Open Sans', sans-serif;font-size:16.5px;}
+        .mySelect2{width:100%;border:0.5px solid #ABABAB;font-family: 'Open Sans', sans-serif;font-size:16.5px;}
         /* TextArea */
-        .myTextArea{display:block;width:75%;height:75px;margin:10px auto;padding:5px;border:1px solid black;border-radius: .25rem;}
+        .myTextArea{display:block;width:95%;height:75px;margin:10px auto;padding:5px;border:1px solid black;border-radius: .25rem;}
 
         /* Send Button */
         .btn-pink-moon {background: #ec008c;background: -webkit-linear-gradient(to right, #fc6767, #ec008c);background: linear-gradient(to right, #fc6767, #ec008c);color: #fff;border: 1px solid black;display: block;width: 35%;margin: 0 auto;border-radius: 10px;font-weight: 600;padding: 3.5px;}
@@ -68,7 +72,7 @@
         .modal-header h5{font-size:17px !important;}
         .modal-body{display:block;margin: 5px auto;}
 
-        .b1 {border: 1px solid black;}
+        .b1 {border: 1px solid black;}5
         .b2 {border: 1px solid red;}
         .b3 {border: 1px solid green;}
         .b4{border:1px solid blue;}
@@ -80,7 +84,7 @@
             }
         }
         @media(max-width: 506px) {
-            .panel,.panel-oculto {
+            .panel, .panel-oculto {
                 width: 92.5%;
             }
 
@@ -94,8 +98,10 @@
 
             .headerTitulo {
                 font-size: 16px;
-            }            
+            }
+            .mySelect{width:97%;text-align:center;}
         }
+
         @media(max-width: 455px) {
             .panel-header {
                 width: 106%;
@@ -109,8 +115,12 @@
                 margin: 5px auto;
             }
         }
-        @media(max-width: 333px) {            
-            .panel-header{width:107.35%;}
+
+        @media(max-width: 333px) {
+            .panel-header {
+                width: 107.35%;
+            }
+
             .panel-body {
                 width: 90.5%;
                 padding: 2.5px;
@@ -152,15 +162,14 @@
                         <span id="spOculto" runat="server"></span>
                     </div>
                     <div class="row filas">
-                        <div class="col-md-6">
-                            <label for="infoText">
+                        <div class="col-sm-12">
+                            <label for="infoText3">
                                 · Whitespace delimited word count 
                             </label>
                         </div>
-                        <div class="col-md-6">
-                            <input type="text" class="form-control" id="wordCount" runat="server" />
-                        </div>                        
-                    </div>
+                        <br />
+                        <select class="mySelect" id="wordCount" runat="server" maxlength="255"></select>                       
+                    </div>                   
                     <div class="row filas">
                         <div class="col-md-6">
                             <label for="infoText">
@@ -172,16 +181,32 @@
                         </div>                        
                     </div>
                     <div class="row filas" >
-                        <div class="col-md-6">
-                            <label for="infoText">
-                                ·   
-                            </label>
-                        </div>
-                        <div class="col-md-6">
-                            <input type="text" class="form-control" id="dimensions"  runat="server"/>
-                        </div>                        
+                            <div class="col-md-4">
+                                <label for="infoText2">
+                                    Mean
+                                </label>
+                                <select class="mySelect2" id="mean" runat="server" maxlength="255"></select>
+                            </div>                        
+                            <div class="col-md-4">
+                                <label for="infoText2">
+                                    Mode
+                                </label>
+                                <select class="mySelect2" id="mode" runat="server" maxlength="255"></select>
+                            </div>                        
+                            <div class="col-md-4">
+                                <label for="infoText2">
+                                    Median
+                                </label>
+                                <select class="mySelect2" id="median" runat="server" maxlength="255"></select>
+                            </div>                                  
                     </div>
                     <div class="row filas2">
+                        <div class="col-sm-12">
+                            <label for="infoText3">
+                                Text
+                            </label>
+                        </div>
+                        <br />
                         <textarea class="myTextArea" id="txtArea" runat="server" maxlength="255"></textarea>                       
                     </div>
                      <div class="row">
