@@ -1,0 +1,58 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 10vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+
+
+/* Mi CSS */
+.container .titulo{text-align: center !important;width: 100%;padding: 10px;font-weight: 500;color: #61dafb}
+label[for=lblTextos]{padding:10px;font-size:25px;text-align: center;line-height: 30px;margin-top:2.5px;}
+label[for=lblTextos2]{padding:10px;font-size:22.5px;text-align: left;line-height: 30px;margin-top:2.5px;color:#56ab2f;}
+label[for=lblTextos3]{padding:10px;font-size:22.5px;text-align: center;line-height: 30px;margin-top:2.5px;color:#ec008c;}
+label[for=lblTextos4]{padding:10px;font-size:22.5px;text-align: center;line-height: 30px;margin-top:2.5px;color:#772CE8;}
+label[for=lblTextos5]{padding:10px;font-size:22.5px;text-align: center;line-height: 30px;margin-top:2.5px;color:#ABABAB;}
+
+/* Botón envio */
+.btn-pink-moon {background: #ec008c;background: -webkit-linear-gradient(to right, #fc6767, #ec008c);background: linear-gradient(to right, #fc6767, #ec008c);color: #fff;border: 3px solid #eee;display:block;width: 80%;margin:0 auto;border-radius:10px;}
+.btn-pink-moon:hover {background: #56ab2f;background: -webkit-linear-gradient(to right, #a8e063, #56ab2f);background: linear-gradient(to right, #a8e063, #56ab2f);color: #fff;border: 3px solid #eee;}
+        
+.b1{border:1px solid red;}
+.b2{border:1px solid yellow;}
+.b3{border:1px solid green;}
+.b4{border:1px solid pink;}

@@ -5,439 +5,214 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1" />
     <!-- Estilos CSS de Boostrap, Font-Awesome y más -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    <link href="https://fonts.googleapis.com/css?family=Lacquer|Open+Sans|PT+Sans|Raleway&display=swap" rel="stylesheet">
     <!-- Scripts -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <script type="text/javascript">
-        $(window).scroll(function() {
-          if ($(document).scrollTop() > 50) {
-            $('nav').addClass('shrink');
-          } else {
-            $('nav').removeClass('shrink');
-          }
+        $(document).ready(function () {
+            $(".menu-icon").on("click", function () {
+                $("nav ul").toggleClass("showing");
+            });
         });
+        // Scrolling Effect
+        $(window).on("scroll", function () {
+            if ($(window).scrollTop()) {
+                $('nav').addClass('black');
+            }
+            else {
+                $('nav').removeClass('black');
+            }
+            if ($(window).scrollTop() > 150) {
+                $('nav').addClass('black');
+            }
+        })
     </script>
     <!-- CSS -->
     <style type="text/css">
-        body{margin:0;padding:0;box-sizing:border-box;}
-        header{border:1px solid blue;padding:10px;}
+        body {margin: 0;padding: 0;box-sizing: border-box;}
+        header {padding: 10px;}
+
         /* Varios */
-        .row{margin-left:-10px;margin-right:-10px;}
+        .row {margin-left: -10px;margin-right: -10px;}
+
         /* NavBar */
-
         /*-- Inspiration taken from abdo steif -->
-/* --> https://codepen.io/abdosteif/pen/bRoyMb?editors=1100*/
+        /* --> https://codepen.io/abdosteif/pen/bRoyMb?editors=1100*/
+        /* Navbar section */
+        header {width: 100%;height: 100vh;background: url("imatges/Yo_Madrid.jpg") no-repeat 50% 50%;background-size: cover;}
+        .logo {line-height: 60px;position: fixed;float: left;margin: 16px 46px;color: #fff;font-weight: bold;font-size: 20px;letter-spacing: 2px;}
+        nav {position: fixed;width: 100%;line-height: 60px;}
+        nav ul {line-height: 60px;list-style: none;background: rgba(0, 0, 0, 0);overflow: hidden;color: #fff;padding: 0;text-align: right;margin: 0;padding-right: 40px;transition: 1s;}
+        nav.black ul {background: #000;margin-top: -10px;}
+        nav ul li {display: inline-block;padding: 16px 40px;}
+        nav ul li a {text-decoration: none;color: #fff;font-size: 17px;font-weight: 500}
+        nav ul li a:hover {color: #DB230C;font-size: 18px;font-weight: 700;text-decoration: none;}
+        .menu-icon {line-height: 60px;width: 100%;background: #000;text-align: right;box-sizing: border-box;padding: 15px 24px;cursor: pointer;color: #fff;display: none;}
 
-/* Navbar section */
+        /* Content */
+        .content {width: 64%;margin: 4em auto;font-size: 20px;line-height: 30px;text-align: justify;font-family: 'Open Sans', sans-serif;}        
+        .EncabezadoSeccion {width: 650px;margin: 5px auto;margin-top:20px;text-align: center;font-size: 30px;font-weight: 900;padding: 10px;font-family: 'Lacquer', sans-serif;}
+        .about{border:1px solid green; width:787px;margin:10px auto;}
+        .row2{margin-left:0 !important;margin-right:0 !important;}
+        .infor{border:1px solid blue;background-color:#DB230C;color:#fff;}
+        .mifoto{border:1px solid red;background-image:url("imatges/yo2.jpg");}
 
-.nav {
-	width: 100%;
-	height: 65px;
-	position: fixed;
-	line-height: 65px;
-	text-align: center;
+        .triangulo{
+         width: 172px;
+    height: 100px;
+    border: 3px solid #DB230C;
+    background: #DB230C;
+    -webkit-transform: skew(20deg);
+    -moz-transform: skew(20deg);
+    -ms-transform: skew(20deg);
+    -o-transform: skew(20deg);
+    transform: skew(20deg);
+    float: right;
+    left: 38px;
+    position: relative;
 }
 
-.nav div.logo {
-	float: left;
-	width: auto;
-	height: auto;
-	padding-left: 3rem;
-}
 
-.nav div.logo a {
-	text-decoration: none;
-	color: #fff;
-	font-size: 2.5rem;
-}
+        /* Footer */
+        footer {background-color: #000;color: #ffffff;box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.8);}
+        .ftr_social_icon li {display: inline-block;text-align: center;padding: 10px;}
+        .ftr_social_icon ul li a {border: 1px solid #fff;border-radius: 50%;color: #fff;display: inline-block;font-size: 17px;height: 40px;line-height: 32px;padding: 4px 8px;width: 40px;transition: .5s;}
+        .ftr_social_icon ul li a:hover {background: #DB230C;border-color: #DB230C;color: #fff;}
+        .ftr_btm_area {background: transparent;padding-top: 20px;padding-bottom: 20px;border-top: 1px dotted #888;margin-top: 28px;z-index: 100;position: relative;}
+        .copyright_text {margin: 6px 0;}
+        .payment_mthd_icon li {display: inline-block;margin-left: 10px;font-size: 30px;color: #fff;}
+        .test {display: block;margin: 5px auto;}
+        .card-block {font-size: 1em;position: relative;margin: 0;padding: 1em;border: none;border-top: 1px solid rgba(34, 36, 38, .1);box-shadow: none;}
+        .card {font-size: 1em;overflow: hidden;padding: 5px;border: none;border-radius: .28571429rem;box-shadow: 0 1px 3px 0 #d4d4d5, 0 0 0 1px #d4d4d5;margin-top: 20px;}
+        .carousel-indicators li {border-radius: 12px;width: 12px;height: 12px;background-color: #404040;}
+        .carousel-indicators li {border-radius: 12px;width: 12px;height: 12px;background-color: #404040;}
+        .carousel-indicators .active {background-color: white;max-width: 12px;margin: 0 3px;height: 12px;}
+        .carousel-control-prev-icon {background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;}
+        .carousel-control-next-icon {background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;}
+        .btn {margin-top: auto;}
+        .iconos_header {color: #ffffff;font-size: 20px;}        
+        .iconos_header:hover {color: #ffffff;font-size: 25px;font-weight: 800}
 
-.nav div.logo a:hover {
-	color: #00e676;
-}
+        @media(max-width: 786px) {
 
-.nav div.main_list {
-	height: 65px;
-	float: right;
-}
+            .logo {
+                position: fixed;
+                top: 0;
+                margin-top: 16px;
+            }
 
-.nav div.main_list ul {
-	width: 100%;
-	height: 65px;
-	display: flex;
-	list-style: none;
-	margin: 0;
-	padding: 0;
-}
+            nav ul {
+                max-height: 0px;
+                background: #000;
+            }
 
-.nav div.main_list ul li {
-	width: auto;
-	height: 65px;
-	padding: 0;
-	padding-right: 3rem;
-}
+            nav.black ul {
+                background: #000;
+            }
 
-.nav div.main_list ul li a {
-	text-decoration: none;
-	color: #fff;
-	line-height: 65px;
-	font-size: 2.4rem;
-}
+            .showing {
+                max-height: 34em;
+            }
 
-.nav div.main_list ul li a:hover {
-	color: #F93114;
-	/*color: #00e676;*/
-}
+            nav ul li {
+                box-sizing: border-box;
+                width: 100%;
+                padding: 24px;
+                text-align: center;
+            }
 
-/* Home section */
+            .menu-icon {
+                display: block;
+            }
 
-.home {
-	width: 100%;
-	height: 100vh;
-	background-image: url("imatges/Yo_Madrid.jpg"); /* https://images.unsplash.com/photo-1498550744921-75f79806b8a7?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=b0f6908fa5e81286213c7211276e6b3d&auto=format&fit=crop&w=1500&q=80 */
-	background-position: center top;
-	background-size: cover;
-}
-
-.navTrigger {
-	display: none;
-}
-
-.nav {
-	padding-top: 20px;
-	padding-bottom: 20px;
-	-webkit-transition: all 0.4s ease;
-	transition: all 0.4s ease;
-}
-
-/* Media qurey section */
-
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-	.container {
-		margin: 0;
-	}
-}
-
-@media screen and (max-width: 768px) {
-	.navTrigger {
-		display: block;
-	}
-	.nav div.logo {
-		margin-left: 15px;
-	}
-	.nav div.main_list {
-		width: 100%;
-		height: 0;
-		overflow: hidden;
-	}
-	.nav div.show_list {
-		height: auto;
-		display: none;
-	}
-	.nav div.main_list ul {
-		flex-direction: column;
-		width: 100%;
-		height: 100vh;
-		right: 0;
-		left: 0;
-		bottom: 0;
-		background-color: #111;
-		/*same background color of navbar*/
-		background-position: center top;
-	}
-	.nav div.main_list ul li {
-		width: 100%;
-		text-align: right;
-	}
-	.nav div.main_list ul li a {
-		text-align: center;
-		width: 100%;
-		font-size: 3rem;
-		padding: 20px;
-	}
-	.nav div.media_button {
-		display: block;
-	}
-}
-
-/* Animation */
-/* Inspiration taken from Dicson https://codemyui.com/simple-hamburger-menu-x-mark-animation/ */
-
-.navTrigger {
-	cursor: pointer;
-	width: 30px;
-	height: 25px;
-	margin: auto;
-	position: absolute;
-	right: 30px;
-	top: 0;
-	bottom: 0;
-}
-
-.navTrigger i {
-	background-color: #fff;
-	border-radius: 2px;
-	content: "";
-	display: block;
-	width: 100%;
-	height: 4px;
-}
-
-.navTrigger i:nth-child(1) {
-	-webkit-animation: outT 0.8s backwards;
-	animation: outT 0.8s backwards;
-	-webkit-animation-direction: reverse;
-	animation-direction: reverse;
-}
-
-.navTrigger i:nth-child(2) {
-	margin: 5px 0;
-	-webkit-animation: outM 0.8s backwards;
-	animation: outM 0.8s backwards;
-	-webkit-animation-direction: reverse;
-	animation-direction: reverse;
-}
-
-.navTrigger i:nth-child(3) {
-	-webkit-animation: outBtm 0.8s backwards;
-	animation: outBtm 0.8s backwards;
-	-webkit-animation-direction: reverse;
-	animation-direction: reverse;
-}
-
-.navTrigger.active i:nth-child(1) {
-	-webkit-animation: inT 0.8s forwards;
-	animation: inT 0.8s forwards;
-}
-
-.navTrigger.active i:nth-child(2) {
-	-webkit-animation: inM 0.8s forwards;
-	animation: inM 0.8s forwards;
-}
-
-.navTrigger.active i:nth-child(3) {
-	-webkit-animation: inBtm 0.8s forwards;
-	animation: inBtm 0.8s forwards;
-}
-
-@-webkit-keyframes inM {
-	50% {
-		-webkit-transform: rotate(0deg);
-	}
-	100% {
-		-webkit-transform: rotate(45deg);
-	}
-}
-
-@keyframes inM {
-	50% {
-		transform: rotate(0deg);
-	}
-	100% {
-		transform: rotate(45deg);
-	}
-}
-
-@-webkit-keyframes outM {
-	50% {
-		-webkit-transform: rotate(0deg);
-	}
-	100% {
-		-webkit-transform: rotate(45deg);
-	}
-}
-
-@keyframes outM {
-	50% {
-		transform: rotate(0deg);
-	}
-	100% {
-		transform: rotate(45deg);
-	}
-}
-
-@-webkit-keyframes inT {
-	0% {
-		-webkit-transform: translateY(0px) rotate(0deg);
-	}
-	50% {
-		-webkit-transform: translateY(9px) rotate(0deg);
-	}
-	100% {
-		-webkit-transform: translateY(9px) rotate(135deg);
-	}
-}
-
-@keyframes inT {
-	0% {
-		transform: translateY(0px) rotate(0deg);
-	}
-	50% {
-		transform: translateY(9px) rotate(0deg);
-	}
-	100% {
-		transform: translateY(9px) rotate(135deg);
-	}
-}
-
-@-webkit-keyframes outT {
-	0% {
-		-webkit-transform: translateY(0px) rotate(0deg);
-	}
-	50% {
-		-webkit-transform: translateY(9px) rotate(0deg);
-	}
-	100% {
-		-webkit-transform: translateY(9px) rotate(135deg);
-	}
-}
-
-@keyframes outT {
-	0% {
-		transform: translateY(0px) rotate(0deg);
-	}
-	50% {
-		transform: translateY(9px) rotate(0deg);
-	}
-	100% {
-		transform: translateY(9px) rotate(135deg);
-	}
-}
-
-@-webkit-keyframes inBtm {
-	0% {
-		-webkit-transform: translateY(0px) rotate(0deg);
-	}
-	50% {
-		-webkit-transform: translateY(-9px) rotate(0deg);
-	}
-	100% {
-		-webkit-transform: translateY(-9px) rotate(135deg);
-	}
-}
-
-@keyframes inBtm {
-	0% {
-		transform: translateY(0px) rotate(0deg);
-	}
-	50% {
-		transform: translateY(-9px) rotate(0deg);
-	}
-	100% {
-		transform: translateY(-9px) rotate(135deg);
-	}
-}
-
-@-webkit-keyframes outBtm {
-	0% {
-		-webkit-transform: translateY(0px) rotate(0deg);
-	}
-	50% {
-		-webkit-transform: translateY(-9px) rotate(0deg);
-	}
-	100% {
-		-webkit-transform: translateY(-9px) rotate(135deg);
-	}
-}
-
-@keyframes outBtm {
-	0% {
-		transform: translateY(0px) rotate(0deg);
-	}
-	50% {
-		transform: translateY(-9px) rotate(0deg);
-	}
-	100% {
-		transform: translateY(-9px) rotate(135deg);
-	}
-}
-
-.affix {
-	padding: 0;
-	background-color: #111;
-}
-
-.myH2 {
-	text-align: center;
-	font-size: 4rem;
-}
-.myP {
-	text-align: justify;
-	padding-left: 15%;
-	padding-right: 15%;
-	font-size: 20px;
-}
-@media all and (max-width: 700px) {
-	.myP {
-		padding: 2%;
-	}
-}
+            .EncabezadoSeccion {
+                width: 95%;
+            }
+        }
 
         
-
     </style>
 </head>
 <body style="background-color:#eee;">
-        <nav class="nav">
-            <div class="container">
-                <div class="logo">
-                    <a href="#">Your Logo</a>
+    <div class="wrapper">
+        <header>
+            <nav>
+                <div class="menu-icon">
+                    <i class="fa fa-bars fa-2x"></i>
                 </div>
-                <div id="mainListDiv" class="main_list">
-                    <ul class="navlinks">
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Portfolio</a></li>
-                        <li><a href="#">Services</a></li>
-                        <li><a href="#">Contact</a></li>
+                <div class="logo">
+                    LOGO
+                </div>
+                <div class="menu">
+                    <ul>
+                        <li><a href="#">Inicio</a></li>
+                        <li><a href="#About">Sobre Mi</a></li>
+                        <li><a href="#">Curriculum</a></li>
+                        <li><a href="#">Contacto</a></li>
                     </ul>
                 </div>
-                <span class="navTrigger">
-                    <i></i>
-                    <i></i>
-                    <i></i>
-                </span>
+            </nav>
+        </header>
+        <div class="content">
+            <div class="container">
+                <div  id="About" class="EncabezadoSeccion">
+                    Sobre Mi
+                </div>
             </div>
-        </nav>
-
-        <section class="home">
-        </section>
-        <div style="height: 1000px">
-            <!-- just to make scrolling effect possible -->
-            <h2 class="myH2">What is this ?</h2>
-            <p class="myP">This is a responsive fixed navbar animated on scroll</p>
-            <p class="myP">
-                I took inspiration from  ABDO STEIF (<a href="https://codepen.io/abdosteif/pen/bRoyMb?editors=1100">https://codepen.io/abdosteif/pen/bRoyMb?editors=1100</a>)
-                and Dicson <a href="https://codepen.io/dicson/pen/waKPgQ">(https://codepen.io/dicson/pen/waKPgQ)</a>
+            <p>
+                Bueno pues me llamo Jose y soy un desarrollador Front-End y Back-End.
+                <br />
+                Siempre me ha apasionado el mundo tecnologico y todo lo que conlleva aunque no siempre lo he conseguido entender, esto es un ejemplo de como quedaría algo de texto en el diseño y posterior desarrollo de la pagina web. Esto por decir lo de alguna manera, es mas a modo visual que otra cosa.
+                <br />
+                Por ello recomiendo que no se lea por que surge de llevar una fumada algo contundente. xD
             </p>
-            <p class="myP">I HOPE YOU FIND THIS USEFULL</p>
-            <p class="myP">Albi</p>
-            <p class="myP">
-
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum ratione facere animi impedit rem labore sint repellendus ipsa sapiente voluptatem aut excepturi quo itaque, ab earum cumque. Voluptatem beatae id inventore quod voluptate qui deserunt, quis placeat, tempora ex totam, dolore sequi harum eos voluptatibus animi labore officiis minus laboriosam
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum ratione facere animi impedit rem labore sint repellendus ipsa sapiente voluptatem aut excepturi quo itaque, ab earum cumque. Voluptatem beatae id inventore quod voluptate qui deserunt, quis placeat, tempora ex totam, dolore sequi harum eos voluptatibus animi labore officiis minus laboriosam
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum ratione facere animi impedit rem labore sint repellendus ipsa sapiente voluptatem aut excepturi quo itaque, ab earum cumque. Voluptatem beatae id inventore quod voluptate qui deserunt, quis placeat, tempora ex totam, dolore sequi harum eos voluptatibus animi labore officiis minus laboriosam
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum ratione facere animi impedit rem labore sint repellendus ipsa sapiente voluptatem aut excepturi quo itaque, ab earum cumque. Voluptatem beatae id inventore quod voluptate qui deserunt, quis placeat, tempora ex totam, dolore sequi harum eos voluptatibus animi labore officiis minus laboriosam
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum ratione facere animi impedit rem labore sint repellendus ipsa sapiente voluptatem aut excepturi quo itaque, ab earum cumque. Voluptatem beatae id inventore quod voluptate qui deserunt, quis placeat, tempora ex totam, dolore sequi harum eos voluptatibus animi labore officiis minus laboriosam
-            </p>
+            <div class="container" style="border:1px solid red;">
+                <div class="row">
+                    <div class="about">
+                        <div class="row row2">
+                            <div class="col-sm-8 infor">
+                                <div class="triangulo"></div>
+                                AA
+                            </div>
+                            <div class="col-sm-4 mifoto">
+                                BB
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    
+                </div>
+            </div>
         </div>
+    </div>
+    <!-- Footer -->
+    <footer class="navbar-fixed-bottom">
+        <div class="footer">
+            <div class="ftr_btm_area">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-4 test">
+                            <div class="ftr_social_icon">
+                                <p class="copyright_text text-center">© Jose Sánchez Mateo - 2020 ©</p>
+                                <ul>
+                                    <li><a href="https://www.facebook.com/Xanse69"><i class="fab fa-facebook"></i></a></li>
+                                    <li><a href="https://twitter.com/Xanse69"><i class="fab fa-twitter"></i></a></li>
+                                    <li><a href="https://www.instagram.com/xanse/"><i class="fab fa-instagram"></i></a></li>
+                                    <li><a href="https://www.linkedin.com/in/josesanchez1987/"><i class="fab fa-linkedin"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
 
-        <!-- Jquery needed -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-        <script src="js/scripts.js"></script>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 
-        <!-- Function used to shrink nav bar removing paddings and adding black background -->
-        <script>
-            $(window).scroll(function () {
-                if ($(document).scrollTop() > 50) {
-                    $('.nav').addClass('affix');
-                    console.log("OK");
-                } else {
-                    $('.nav').removeClass('affix');
-                }
-            });
-        </script>
-
-      
 </body>
 </html>

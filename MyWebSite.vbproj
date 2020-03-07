@@ -189,12 +189,15 @@
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="MiWeb\FormularioArchivoTxt.aspx" />
     <Content Include="MiWeb\Imatges\cabecera.jfif" />
     <Content Include="MiWeb\Imatges\cabecera.png" />
     <Content Include="MiWeb\Imatges\header.jpg" />
     <Content Include="MiWeb\Imatges\yo.jpg" />
     <Content Include="MiWeb\Index.aspx" />
     <Content Include="MiWeb\Index2.html" />
+    <Content Include="MiWeb\Login2.aspx" />
+    <Content Include="MiWeb\Stadistics-about-text-files.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
@@ -290,12 +293,33 @@
     <Compile Include="Global.asax.vb">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="MiWeb\FormularioArchivoTxt.aspx.designer.vb">
+      <DependentUpon>FormularioArchivoTxt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MiWeb\FormularioArchivoTxt.aspx.vb">
+      <DependentUpon>FormularioArchivoTxt.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="MiWeb\Index.aspx.designer.vb">
       <DependentUpon>Index.aspx</DependentUpon>
     </Compile>
     <Compile Include="MiWeb\Index.aspx.vb">
       <DependentUpon>Index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MiWeb\Login2.aspx.designer.vb">
+      <DependentUpon>Login2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MiWeb\Login2.aspx.vb">
+      <DependentUpon>Login2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MiWeb\Stadistics-about-text-files.aspx.designer.vb">
+      <DependentUpon>Stadistics-about-text-files.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MiWeb\Stadistics-about-text-files.aspx.vb">
+      <DependentUpon>Stadistics-about-text-files.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
