@@ -80,14 +80,16 @@ Public Class Stadistics_about_text_files
     End Function
 
     Public Function calculateMode(ByRef line As String) As Integer() 'Hola me llamo Jose
-        Dim MyArray(line.Length / 2) As Integer '18
+        Dim alfabeto(26) As String
+        alfabeto = {"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "ñ", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"}
+        Dim MyArray(line.Length - 1) As Integer '18
         For i = 0 To line.Length - 1
             Dim primeraPalabra As String = line(i)
-            For z = i + 1 To line.Length / 2
-                MyArray(z) = 1
-                If ((primeraPalabra = line(z) And primeraPalabra <> "")) Then
-                    MyArray(z) += 1
-                End If
+            For z = 0 To alfabeto.Length - 1
+                If primeraPalabra.ToLower = alfabeto(z) Then MyArray(i) += 1
+            Next
+            For p = i + 1 To line.Length - 1
+                If primeraPalabra = line(p) Then MyArray(p) += 1
             Next
         Next
         Return MyArray 'solucion, crea array de palabras y comparas y sumas si esta..
